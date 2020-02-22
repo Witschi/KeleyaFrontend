@@ -8,9 +8,13 @@
  * @format
  */
 
+import 'react-native-gesture-handler';
+
+import { SafeAreaView } from 'react-navigation';
+import { NavigationContainer } from '@react-navigation/native';
+
 import React, {Fragment} from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
@@ -28,6 +32,7 @@ import {
 
 const App = () => {
   return (
+	<NavigationContainer>
     <Fragment>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
@@ -71,6 +76,7 @@ const App = () => {
         </ScrollView>
       </SafeAreaView>
     </Fragment>
+</NavigationContainer>
   );
 };
 
