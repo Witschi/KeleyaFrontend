@@ -1,0 +1,22 @@
+{
+	"GoalScreen":{
+		"title": "What are your goals?",
+		"subtitle": "Help us taylor our program to your needs",
+		"find_workouts": "Find workouts for my pregnancy",
+		"maintain_weight": "Not to gain unnecessary weight",
+		"birth_preparation": "Prepare for birth",
+		"feel_relaxed": "Feel more relaxed"
+	},
+	"WelcomeScreen": {
+		"title": "Welcome to Keleya!"
+	},
+	"DueDateScreen": {
+		"title": "Select your estimated due date"
+	},
+	"ActivityLevelScreen": {
+ 		"title": "To get your perfect workouts, tell us your activity level!",
+		"levels": [
+			"I don’t exercise.","I rarely exercise.","I sometimes exercise.","I regularly exercise.","I often exercise."]
+	}
+	
+}
