@@ -3,11 +3,11 @@
 React-Native frontend with Redux state management
 
 ## Running
-* 'yarn install'
+* `yarn install`
 * generate debug.keystore:
-	* 'keytool -genkey -v -keystore android/app/debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000'
-* (one console:) npx react-native start 
-* (other console:) npx react-native run-android
+	* `keytool -genkey -v -keystore android/app/debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000`
+* (one console:) `npx react-native start` 
+* (other console:) `npx react-native run-android`
 
 ## Directory Structure
 * reducers: contains reducers in separate files
