@@ -3,19 +3,20 @@ import { Image,View, Text, Button } from 'react-native';
 import DatePicker from 'react-native-date-picker'
 import { connect } from 'react-redux'
 import { toggleGoal } from '../actions'
-import {KeleyaBackground, VertMiddle,VertBottom} from '../elements'
+import {KeleyaBackground, VertMiddle,VertBottom} from './elements'
 import { CheckBox } from 'react-native-elements'
+import {styles} from './styles'
 
 function MyCheckBox(props){
 	return(
 		<CheckBox
-  containerStyle={{margin:0,paddingLeft:20,paddingRight:20,marginLeft:0,marginRight:0,backgroundColor:"rgba(255,255,255,0.9)"}}
-  textStyle={{fontSize:20,fontWeight:'normal'}}
-  title={props.title}
-  checkedIcon={<Image source={require('../checked.png')} />}
-  uncheckedIcon={<Image source={require('../unchecked.png')} />}
-  checked={props.checked}
-  onPress={props.onPress}
+		  containerStyle={[styles.field,{alignItems:'flex-start', backgroundColor:"rgba(255,255,255,0.9)"}]}
+		  textStyle={styles.textNormal}
+		  title={props.title}
+		  checkedIcon={<Image source={require('../checked.png')} />}
+		  uncheckedIcon={<Image source={require('../unchecked.png')} />}
+		  checked={props.checked}
+		  onPress={props.onPress}
 />
 	)
 }
@@ -29,9 +30,9 @@ function GoalScreen({navigation,dispatch,goals}){
             <VertBottom navigation={navigation} next='DueDate'>
 
            <View style={{width:'100%'}}>
-			<View style={{alignItems:'center',margin:0,marginLeft:0,marginRight:0,backgroundColor:"rgba(255,255,255,0.9)"}}>
-			<Text style={{fontSize:30, paddingBottom:20}}>{strings.GoalScreen.title}</Text>
-            <Text style={{fontSize:20,paddingBottom:30}}>{strings.GoalScreen.subtitle}</Text>
+			<View style={[styles.field,{backgroundColor:"rgba(255,255,255,0.9)"}]}>
+			<Text style={[styles.textVeryBig,{paddingBottom:20}]}>{strings.GoalScreen.title}</Text>
+            <Text style={[styles.textNormal,{paddingBottom:30}]}>{strings.GoalScreen.subtitle}</Text>
 			</View>
 			<MyCheckBox checked={goals['find_workouts']} title={strings.GoalScreen['find_workouts']} onPress={() => dispatch(toggleGoal('find_workouts'))}/>
             <MyCheckBox checked={goals['maintain_weight']} title={strings.GoalScreen['maintain_weight']} onPress={() => dispatch(toggleGoal('maintain_weight'))}/>
